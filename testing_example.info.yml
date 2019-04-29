@@ -1,0 +1,10 @@
+
+
+type: module
+name: Testing example
+description: 'Example of testing in Drupal.'
+version: VERSION
+core: 8.x
+
+
+

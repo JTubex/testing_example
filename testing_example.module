@@ -1,0 +1,20 @@
+
+
+
+
+
+<?php
+
+use Drupal\node\NodeInterface;
+
+function testing_example_node_presave(NodeInterface $node) {
+  if (!$node->hasField('field_read_time')) {
+    return;
+  }
+
+  $content = $node->get('body')->value;
+  $node->set(
+    'field_read_time',
+    \Drupal::service('testing_example.read_time_calculator')->calculate($content)
+  );
+}
