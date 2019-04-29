@@ -1,7 +1,3 @@
-
-
-
-
 services:
   testing_example.read_time_calculator:
     class: Drupal\testing_example\ReadTimeCalculator
